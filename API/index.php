@@ -7,25 +7,25 @@ require_once __DIR__ . "/libraries/path.php";
 require_once __DIR__ . "/libraries/method.php";
 
 if(isGetMethod()) {
-    if (isPath("/developpement_web_API/API/")) {
+    if (isPath("/dev-web-api-2023/API/")) {
         require_once __DIR__ . "/routes/home/get.php";
         die();
-    }elseif(isPath("/developpement_web_API/API/users")) {
+    }elseif(isPath("/dev-web-api-2023/API/users")) {
         require_once __DIR__ . "/routes/users/get.php";
         die();
     }
 }elseif(isPostMethod()) {
-    if (isPath("/developpement_web_API/API/users")) {
+    if (isPath("/dev-web-api-2023/API/users")) {
         require_once __DIR__ . "/routes/users/post.php";
         die();
     }
 }elseif(isPatchMethod()) {
-    if (isPath("/developpement_web_API/API/users/:user")) {
+    if (isPath("/dev-web-api-2023/API/users/:user")) {
         require_once __DIR__ . "/routes/users/patch.php";
         die();
     }
 }elseif(isDeleteMethod()) {
-    if (isPath("/developpement_web_API/API/users/:user")) {
+    if (isPath("/dev-web-api-2023/API/users/:user")) {
         require_once __DIR__ . "/routes/users/delete.php";
         die();
     }
