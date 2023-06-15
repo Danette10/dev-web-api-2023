@@ -18,6 +18,9 @@ if(isGetMethod()) {
     if (isPath("/dev-web-api-2023/API/users")) {
         require_once __DIR__ . "/routes/users/post.php";
         die();
+    }elseif(isPath("/dev-web-api-2023/API/login")) {
+        require_once __DIR__ . "/routes/login/post.php";
+        die();
     }
 }elseif(isPatchMethod()) {
     if (isPath("/dev-web-api-2023/API/users/:user")) {
